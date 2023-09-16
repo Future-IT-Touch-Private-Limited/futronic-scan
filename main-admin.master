@@ -1,0 +1,469 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="main-admin.master.cs" Inherits="main_admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/admin.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="robots" content="noindex,nofollow" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" EnableCdn="true" runat="server"></asp:ScriptManager>
+        <div class="page-wrapper">
+
+
+            <!-- page header start -->
+            <div class="page-main-header row">
+                <div id="sidebar-toggle" class="toggle-sidebar col-auto">
+                    <i data-feather="chevrons-left"></i>
+                </div>
+                <div class="nav-right col p-0">
+                    <ul class="header-menu">
+                        <li>
+                            <div class="d-md-none mobile-search">
+                                <i data-feather="search"></i>
+                            </div>
+                            <div class="form-group search-form">
+                                <input type="text" class="form-control" placeholder="Search here...">
+                            </div>
+                        </li>
+                        <li>
+                            <a href="index.html#!" onclick="javascript:toggleFullScreen()">
+                                <i data-feather="maximize"></i>
+                            </a>
+                        </li>
+                        <li class="onhover-dropdown">
+                            <a href="javascript:void(0)">
+                                <i data-feather="save"></i>
+                            </a>
+                            <div class="notification-dropdown onhover-show-div">
+                                <div class="dropdown-title">
+                                    <h6>Recent Attachments</h6>
+                                    <a href="reports.html">Show all</a>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="media">
+                                            <div class="icon-notification bg-success-light">
+                                                <i class="fas fa-file-word"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="reports.html">
+                                                    <h6>Doc_file.doc</h6>
+                                                </a>
+                                                <span>800MB</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <div class="icon-notification bg-primary-light">
+                                                <i class="fas fa-file-image"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="reports.html">
+                                                    <h6>Apartment.jpg</h6>
+                                                </a>
+                                                <span>500kb</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <div class="icon-notification bg-warning-light">
+                                                <i class="fas fa-file-pdf"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="reports.html">
+                                                    <h6>villa_report.pdf</h6>
+                                                </a>
+                                                <span>26MB</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="onhover-dropdown notification-box">
+                            <a href="javascript:void(0)">
+                                <i data-feather="bell"></i>
+                                <span class="label label-shadow label-pill notification-badge">3</span>
+                            </a>
+                            <div class="notification-dropdown onhover-show-div">
+                                <div class="dropdown-title">
+                                    <h6>Notifications</h6>
+                                    <a href="favourites.html">Show all</a>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="media">
+                                            <div class="icon-notification bg-primary-light">
+                                                <i class="fab fa-xbox"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6>Item damaged</h6>
+                                                <span>8 hours ago, Tadawis 24</span>
+                                                <p class="mb-0">"the table is broken:("</p>
+                                                <ul class="user-group">
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/about/4.jpg" class="img-fluid" alt="">
+                                                        </a>
+                                                    </li>
+                                                    <li class="reply">
+                                                        <a href="javascript:void(0)">Reply
+                                                    </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <div class="icon-notification bg-success-light">
+                                                <i class="fas fa-file-invoice-dollar"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6>Payment received</h6>
+                                                <span>2 hours ago, Bracka 15</span>
+                                                <ul class="user-group">
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/about/1.jpg" class="img-fluid" alt="">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/about/2.jpg" class="img-fluid" alt="">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/about/3.jpg" class="img-fluid" alt="">
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <div class="icon-notification bg-warning-light">
+                                                <i class="fas fa-comment-dots"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6>New inquiry</h6>
+                                                <span>1 Days ago, Krowada 7</span>
+                                                <p class="mb-0">"is the villa still available?"</p>
+                                                <ul class="user-group">
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/about/2.jpg" class="img-fluid" alt="">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/about/3.jpg" class="img-fluid" alt="">
+                                                        </a>
+                                                    </li>
+                                                    <li class="reply">
+                                                        <a href="javascript:void(0)">Reply
+                                                    </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="onhover-dropdown">
+                            <a href="javascript:void(0)">
+                                <i data-feather="mail"></i>
+                            </a>
+                            <div class="notification-dropdown chat-dropdown onhover-show-div">
+                                <div class="dropdown-title">
+                                    <h6>Messages</h6>
+                                    <a href="user-profile.html">View all</a>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="media">
+                                            <div class="chat-user">
+                                                <img src="../assets/images/avatar/1.jpg" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="user-profile.html">
+                                                    <h6>Bob Frapples</h6>
+                                                </a>
+                                                <span>Template Represents simply...</span>
+                                            </div>
+                                            <div class="status online">online</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <div class="chat-user">
+                                                <img src="../assets/images/avatar/3.jpg" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="user-profile.html">
+                                                    <h6>Greta Life</h6>
+                                                </a>
+                                                <span>Template Represents simply...</span>
+                                            </div>
+                                            <div class="status away">Away</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <div class="chat-user">
+                                                <img src="../assets/images/avatar/4.jpg" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="user-profile.html">
+                                                    <h6>Greta Life</h6>
+                                                </a>
+                                                <span>Template Represents simply...</span>
+                                            </div>
+                                            <div class="status online">online</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <div class="chat-user">
+                                                <img src="../assets/images/avatar/7.jpg" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="user-profile.html">
+                                                    <h6>Greta Life</h6>
+                                                </a>
+                                                <span>Template Represents simply...</span>
+                                            </div>
+                                            <div class="status busy">Busy</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="profile-avatar onhover-dropdown">
+                            <div>
+                                <img src="../assets/images/avatar/3.jpg" class="img-fluid" alt="">
+                            </div>
+                            <ul class="profile-dropdown onhover-show-div">
+                                <li><a href="user-profile.html"><span>Account </span><i data-feather="user"></i></a></li>
+                                <li><a href="listing.html"><span>Listing</span><i data-feather="file-text"></i></a></li>
+                                <li><a href="login.html"><span>Log in</span><i data-feather="log-in"></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- page header end -->
+
+            <!-- page header end -->
+            <div class="page-body-wrapper">
+
+
+                <!-- page sidebar start -->
+                <div class="page-sidebar">
+                    <div class="logo-wrap">
+                        <a href="index.html">
+                            <img src="../assets/images/logo/4.png" class="img-fluid for-light" alt="">
+                            <img src="../assets/images/logo/9.png" class="img-fluid for-dark" alt="">
+                        </a>
+                        <div class="back-btn d-lg-none d-inline-block">
+                            <i data-feather="chevrons-left"></i>
+                        </div>
+                    </div>
+                    <div class="main-sidebar">
+                        <div class="user-profile">
+                            <div class="media">
+                                <div class="change-pic">
+                                    <img src="../assets/images/avatar/3.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <a href="user-profile.html">
+                                        <h6>Zack Lee</h6>
+                                    </a>
+                                    <span class="font-roboto">zackle@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="mainsidebar">
+                            <ul class="sidebar-menu custom-scrollbar">
+                                <li class="sidebar-item">
+                                    <a href="dash.aspx" class="sidebar-link only-link">
+                                        <i data-feather="airplay"></i>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="javascript:void(0)" class="sidebar-link">
+                                        <i data-feather="grid"></i>
+                                        <span>Analyst</span>
+                                    </a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li>
+                                            <a href="add-analyst.aspx">
+                                                <i data-feather="chevrons-right"></i>
+                                                Add Analyst
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="all-analysts.aspx">
+                                                <i data-feather="chevrons-right"></i>
+                                                All Analysts
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="all-users.aspx" class="sidebar-link only-link">
+                                        <i data-feather="users"></i>
+                                        <span>Users</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="patterns.aspx" class="sidebar-link only-link">
+                                        <i data-feather="users"></i>
+                                        <span>Patterns</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="settings.aspx" class="sidebar-link only-link">
+                                        <i data-feather="users"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="sidebar-item">
+                                    <a href="javascript:void(0)" class="sidebar-link">
+                                        <i data-feather="layout"></i>
+                                        <span>Fingerprints</span>
+                                    </a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li>
+                                            <a href="retake-users.aspx">
+                                                <i data-feather="chevrons-right"></i>
+                                                Retake Required
+                                        </a>
+                                        </li>
+                                        <li>
+                                            <a href="pending-fingerprint-users.aspx">
+                                                <i data-feather="chevrons-right"></i>
+                                                Pending Fingerprints
+                                        </a>
+                                        </li>
+                                        <li>
+                                            <a href="completed-fingerprints.aspx">
+                                                <i data-feather="chevrons-right"></i>
+                                                Completed Tasks
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="map.html" class="sidebar-link only-link">
+                                        <i data-feather="map-pin"></i>
+                                        <span>Map</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="reports.html" class="sidebar-link only-link">
+                                        <i data-feather="bar-chart-2"></i>
+                                        <span>Reports</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="javascript:void(0)" class="sidebar-link">
+                                        <i data-feather="unlock"></i>
+                                        <span>Authentication</span>
+                                    </a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li>
+                                            <a href="login.html">
+                                                <i data-feather="chevrons-right"></i>
+                                                Log in
+                                        </a>
+                                        </li>
+                                        <li>
+                                            <a href="signup.html">
+                                                <i data-feather="chevrons-right"></i>
+                                                sign up
+                                        </a>
+                                        </li>
+                                        <li>
+                                            <a href="404.html">
+                                                <i data-feather="chevrons-right"></i>
+                                                404
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="upgrade-box">
+                                        <img src="../assets/images/svg/1.svg" class="img-fluid" alt="">
+                                        <h6>Need Help</h6>
+                                        <a href="#" target="_blank" class="p-0 m-0">
+                                            <span class="d-block">Raise ticket at "support@pixelstrap.com"</span>
+                                        </a>
+                                   
+                                        <button type="button" onclick=" window.open('#', '_blank');" class="btn btn-pill btn-gradient color-4 btn-sm mt-2 fw-bold">Buy Now</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- page sidebar end -->
+
+
+                <div class="page-body">
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- tap to top start -->
+        <div class="tap-top">
+            <div>
+                <i class="fas fa-arrow-up"></i>
+            </div>
+        </div>
+        <!-- tap to top end -->
+
+        <!-- latest jquery-->
+        <%--<script id="jquery_script" src="assets/js/jquery-3.6.0.min.js"></script>--%>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/feather-icon/feather.min.js"></script>
+        <script src="assets/js/feather-icon/feather-icon.js"></script>
+        <script src="assets/js/sidebar.js"></script>
+        <script src="assets/js/chart/apex-chart/apex-chart.js"></script>
+        <script src="assets/js/chart/apex-chart/stock-prices.js"></script>
+        <script src="assets/js/admin-dashboard.js"></script>
+        <script src="assets/js/admin-script.js"></script>
+        <script src="assets/js/customizer.js"></script>
+
+        <!-- Color-picker js-->
+        <%--<script src="../assets/js/color/custom-colorpicker.js"></script>--%>
+    </form>
+</body>
+</html>
